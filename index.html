@@ -63,22 +63,16 @@
       color: #aaa; /* light grey placeholders */
     }
 
-    /* Maintenance Notice */
-    .maintenance h3 {
+    /* Maintenance Notice 
+    .maintenance {
       color: #05ACFD;
       font-size: 14px;
       font-weight: bold;
-      margin-top: 14px;
+      margin-top: 10px;
       width: 75%;
       max-width: 250px;
     }
-    .maintenance .sub {
-      color: #05ACFD;
-      font-size: 12px;
-      font-weight: normal;
-      margin-top: 2px;
-    }
-
+*/
     /* Login + Forgot password row */
     .login-actions {
       display: flex;
@@ -104,7 +98,7 @@
     /* Divider line: thicker, semi-transparent, left-aligned */
     .divider {
       border-top: 2px solid rgba(255,255,255,0.7);
-      margin: 30px 0;
+      margin: 30px 0;           /* extra spacing */
       width: 80%;          
       max-width: 450px;
       align-self: flex-start;
@@ -126,7 +120,7 @@
     .icon {
       font-size: 18px;
       display: inline-block;
-      transform: translateY(2px);
+      transform: translateY(2px); /* vertically align with text */
     }
 
     /* Responsive */
@@ -151,13 +145,13 @@
       <input type="text" placeholder="User Name">
       <input type="password" placeholder="Password">
 
+   
+
       <div class="login-actions">
         <button type="submit">Login</button>
         <a href="#" class="forgot">Forgot Password?</a>
       </div>
-
-
-
+    </form>  
     <!-- Divider -->
     <div class="divider"></div>
 
