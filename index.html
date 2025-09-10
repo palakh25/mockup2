@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Crystal Clear Close - Login</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: Arial, sans-serif; }
+
+    html, body { height: 100%; width: 100%; }
+
+    body {
+      display: flex;
+      background: url('home.png') no-repeat center center/cover;
+    }
+
+    /* Global link reset */
+    a, a:link, a:visited, a:hover, a:active {
+      text-decoration: none !important;
+      color: #fff;
+    }
+
+    /* Pink slanted overlay */
+    .left {
+      flex: 0 0 45%;
+      background: rgba(225, 0, 125, 0.5);
+      color: #fff;
+      padding: 60px 40px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      clip-path: polygon(0 0, 85% 0, 70% 100%, 0% 100%);
+      height: 100vh;
+      overflow-y: auto;
+    }
+
+    .left h1 {
+      font-size: 36px;
+      margin-bottom: 5px;
+      text-shadow: 2px 2px 4px #05ACFD; /* blue shadow */
+    }
+    .left .subtitle { margin-bottom: 25px; font-size: 18px; opacity: 0.9; }
+
+    /* Login form */
+    .login-form {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin-bottom: 20px;
+    }
+    .login-form input[type="text"],
+    .login-form input[type="password"] {
+      padding: 6px 10px;
+      border: 1px solid #ccc;
+      border-radius: 3px;
+      font-size: 13px;
+      background: #fff;
+      color: #333;
+      width: 75%;
+      max-width: 250px;
+    }
+    .login-form input::placeholder {
+      color: #aaa; /* light grey placeholders */
+    }
+
+    /* Maintenance Notice */
+    .maintenance h3 {
+      color: #05ACFD;
+      font-size: 14px;
+      font-weight: bold;
+      margin-top: 14px;
+      width: 75%;
+      max-width: 250px;
+    }
+    .maintenance .sub {
+      color: #05ACFD;
+      font-size: 12px;
+      font-weight: normal;
+      margin-top: 2px;
+    }
+
+    /* Login + Forgot password row */
+    .login-actions {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 75%;
+      max-width: 250px;
+      margin-top: 10px;
+    }
+    .login-actions button {
+      padding: 6px 14px;
+      border: 1px solid #fff;   /* thin white border */
+      background: #00aaff;
+      color: #fff;
+      font-size: 13px;
+      font-weight: bold;
+      border-radius: 3px;
+      cursor: pointer;
+    }
+    .login-actions button:hover { background: #008ecc; }
+    .forgot { font-size: 13px; }
+
+    /* Divider line: thicker, semi-transparent, left-aligned */
+    .divider {
+      border-top: 2px solid rgba(255,255,255,0.7);
+      margin: 30px 0;
+      width: 80%;          
+      max-width: 450px;
+      align-self: flex-start;
+    }
+
+    /* What's New section */
+    .news {
+      width: 75%;
+      max-width: 250px;
+      text-align: left;
+      display: grid;
+      gap: 18px;
+    }
+    .news h3 { font-size: 16px; font-weight: bold; display: flex; align-items: center; gap: 8px; }
+    .news .sub { font-size: 12px; opacity: 0.95; }
+    .news a { color: #fff; }
+
+    /* Play icon */
+    .icon {
+      font-size: 18px;
+      display: inline-block;
+      transform: translateY(2px);
+    }
+
+    /* Responsive */
+    @media (max-width: 900px) {
+      .left { flex: 0 0 60%; clip-path: polygon(0 0, 100% 0, 90% 100%, 0% 100%); }
+      .news, .divider { width: 85%; }
+    }
+    @media (max-width: 600px) {
+      body { justify-content: center; }
+      .left { flex: 0 0 90%; clip-path: none; border-radius: 12px; }
+      .news, .divider { width: 100%; max-width: none; }
+    }
+  </style>
+</head>
+<body>
+  <div class="left">
+    <h1>Welcome</h1>
+    <p class="subtitle">to your crystal clear close</p>
+
+    <!-- LOGIN FORM -->
+    <form class="login-form">
+      <input type="text" placeholder="User Name">
+      <input type="password" placeholder="Password">
+
+      <div class="login-actions">
+        <button type="submit">Login</button>
+        <a href="#" class="forgot">Forgot Password?</a>
+      </div>
+
+
+
+    <!-- Divider -->
+    <div class="divider"></div>
+
+    <!-- What's New block -->
+    <section class="news">
+      <div>
+        <h3>What’s New in ART?</h3>
+        <div class="sub"><a href="#">Access Recent Updates Here</a></div>
+      </div>
+      <div>
+        <h3>ART Certification Available Now!</h3>
+        <div class="sub"><a href="#">Learn More Here</a></div>
+      </div>
+      <div>
+        <h3><span class="icon">▶</span> Enroll in Genius Academy</h3>
+      </div>
+    </section>
+  </div>
+</body>
+</html>
